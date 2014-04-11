@@ -3,3 +3,4 @@ temp
 .sass-cache
 .tmp
 app/bower_components
+.DS_Store
