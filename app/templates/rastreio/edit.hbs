@@ -1,0 +1,55 @@
+<div id="rastreio-edit">
+	<div class="modal fade" id="enviar-email" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">Enviar Link de Rastreio por Email</h4>
+	      </div>
+	      <div class="modal-body">
+	      	Enviar para:
+	      	{{view Ember.TextField valueBinding="controller.email" type="email" class="form-control" placeholder="exemplo@email.com"}}
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" {{action 'enviarEmail'}} class="btn btn-primary">Enviar Email</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<img src="images/marker.png" id="marker" style="display:none">
+
+	<div class="ative-localizacao-fade"></div>
+	<div class="ative-localizacao">
+		<p>Clique em <b>Permitir</b> e autorize a utilização da sua localização para continuar</p>
+	</div>
+
+	<div class="fixed-url">
+		Você está sendo rastreado através desse link: <br>
+		<a {{bind-attr href=model.bitly_link}} target="_blank">{{ model.bitly_link_without_http }}</a>
+		<a href="#" id="lnk-copiar" class="btn btn-success" {{bind-attr data-clipboard-text=model.bitly_link }}>Copiar</a>
+		<button class="btn btn-primary" data-toggle="modal" data-target="#enviar-email">
+		  Enviar por Email
+		</button>
+	</div>
+
+	<div id="qrcode">
+		<div class="btt-close">x</div>
+		<div class="container">
+			<div class="row">
+				<h1 class="col-sm-9">
+					Agora acesse do seu celular para que seu rastreio seja mais preciso.
+					<div class="leia-qr">Leia o QR Code ao lado.</div>
+					<br>
+					<p>Ou acesse o seguinte link pelo seu celular: <a {{bind-attr href=model.bitly_link}} target="_blank">{{ model.bitly_link_without_http }}</a></p>
+				</h1>
+				<div class="qr col-sm-3">
+					<img {{bind-attr src=qrcode}} />
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div id="mapa"></div>
+
+</div>

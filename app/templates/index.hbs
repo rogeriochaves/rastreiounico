@@ -1,0 +1,76 @@
+<div id="page-index">
+	{{view Rastreiounico.MapaPrincipalView}}
+	<div class="banner-principal">
+		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+			<h1>Rastreie qualquer coisa, <br /> pra qualquer um, com um clique, <br /> de graça, sem cadastro.</h1>
+			{{#link-to 'rastreios.new' class="btn btn-lg btn-success"}}Gerar Código de Rastreio{{/link-to}}
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="como-funciona">
+			<h2>Como Funciona</h2>
+			<div class="row">
+				<div class="col-sm-4">
+					<p>
+						<img src="images/icon-devices.png" class="icon">
+						<span class="num">1</span>
+						Acesse o site pelo computador ou diretamente pelo celular e clique em <b>Gerar Código de Rastreio</b>
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						<img src="images/icon-map.png" class="icon">
+						<span class="num">2</span>
+						Você já está sendo rastreado e poderá passar a URL pra quem quiser te acompanhar
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						<img src="images/icon-car.png" class="icon">
+						<span class="num">3</span>
+						Agora deixe seu celular com 3G e GPS ligado e siga seu caminho!
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="sugestoes">
+			<h2>Sugestões de Uso</h2>
+			<div class="row">
+				<div class="col-sm-4">
+					<p>
+						<span class="num">1</span>
+						Aroldo é dono de uma pizzaria, e sempre que alguém pede uma pizza, ele pede pro motoboy gerar um código de rastreio em seu celular e o passa para o cliente
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						<span class="num">2</span>
+						Sr. Venâncio é dono de uma companhia de ônibus e gosta sempre de saber onde sua frota está, por isso, pede
+						para que os motoristas ativem o rastreio em cada viagem
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						<span class="num">3</span>
+						Aninha tem muito ciúmes de seu namorado Lucas, e manda que ele sempre ligue o rastreio no código que ela já
+						possui pra que ela saiba onde por onde ele anda
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			Feito com
+			<a href="http://yeoman.io/" target="_blank">Yeoman</a>,
+			<a href="http://emberjs.com/" target="_blank">Ember.js</a>,
+			<a href="https://www.firebase.com/" target="_blank">Firebase</a>,
+			<a href="https://bitly.com/" target="_blank">Bit.ly</a> e
+			<a href="https://mandrillapp.com" target="_blank">Mandrill</a>.
+			Nenhum código server-side.
+		</div>
+	</footer>
+</div>

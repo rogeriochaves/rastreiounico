@@ -1,0 +1,83 @@
+$icon-font-path: "../styles/fonts/"; // Change the path to the fonts
+@import "bootstrap-sass/lib/bootstrap";
+
+header{
+	padding: 20px 0;
+	.logo{font-size:30px; a{color:#333; text-decoration: none;}}
+}
+h2{font-weight: 300}
+
+#page-index{
+	#mapa-principal{width:100%; height:450px; position: absolute; z-index:-1; opacity:0.5; padding:0; margin:0}
+	.banner-principal{
+		height: 450px; text-align: center;
+		h1{font-weight: normal; font-size: 40px; text-shadow:2px 2px 2px #FFF; padding-top: 15%; padding-bottom: 30px}
+		.btn{max-width:49%}
+		.btn-info{margin-left: 2%}
+	}
+
+	@media all and (max-width: 767px){
+		.banner-principal{
+			.btn{width:100%; max-width:100%; margin-bottom: 20px}
+			.btn-info{margin-left: 0}
+		}
+	}
+
+	.como-funciona, .sugestoes{
+		.row{padding:22px 0}
+		.num{display:inline-block; background: #3498db; border-radius:20px; width:25px; height:25px; text-align: center; color:#FFF;}
+		p{font-size:16px; line-height: 1.5em}
+		.icon{float:left; max-width:30%; width:auto; max-height:105px; margin-right: 4%}
+	}
+
+	.sugestoes{
+		.num{background: #2ecc71}
+	}
+
+	footer{
+		color:#FFF; padding:10px 0; background:#666;
+		a{color:#FFF; text-decoration: underline; &:hover{text-decoration: none;}}
+	}
+}
+
+#rastreio-edit{
+	.fixed-url{
+		position: fixed; top:20%; width:40%; left:30%; padding:1.5% 2%; z-index:1; background: #FFF; text-align: center; color:#000;  border-radius:10px; box-shadow:2px 2px 1px #AAA; font-size:22px; line-height: 2em;
+		a{font-size:25px;}
+		#lnk-copiar{font-size:14px; margin:0 0 0 10px}
+	}
+	#qrcode{
+		position: fixed; bottom:-100%; padding:20px 0; z-index:1; background: #FFF; font-size:30px; width:100%; display: none;
+		h1{font-size:25px; font-weight: 300; width:60%; margin-top: 14px}
+		.leia-qr{margin-top: 10px}
+		.qr{width:40%; text-align: center}
+		p{margin-bottom:0; padding-bottom: 0; margin-top: 15px; font-size:13px;}
+		.btt-close{position: absolute; color:#666; right:20px; top: 5px; font-size:30px; cursor: pointer}
+	}
+	@media all and (max-width: 767px){
+		.fixed-url{
+			width:98%; left:1%; font-size:16px;
+			#lnk-copiar{display:none}
+		}
+		#qrcode{display: none!important}
+	}
+
+	.ative-localizacao-fade{
+		position: fixed; z-index:3; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);
+	}
+	.ative-localizacao{
+		position: fixed; width:300px; height:auto; background: #FFF; box-shadow:2px 2px 1px #AAA; z-index:4; padding:15px; padding-bottom: 5px; border-radius:10px; left:220px; top:20px; display: none;
+		&:before{
+			display: block; margin-top: -25px; right:20px; position: absolute; content: " "; width: 0px; height: 0px; border-style: solid; border-width: 0 8px 10px 8px; border-color: transparent transparent #fff transparent;
+		}
+		&.firefox{top: 140px; left:162px}
+		&.ie{
+			top:auto; bottom:80px; left:55%;
+			&:before{display: none}
+			&:after{
+				display: block; margin-top: 5px; right:20px; position: absolute; content: " "; width: 0px; height: 0px; border-style: solid; border-width: 10px 8px 0 8px; border-color: #fff transparent transparent transparent;
+			}
+		}
+		
+	}
+}

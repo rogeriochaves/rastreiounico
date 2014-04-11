@@ -1,0 +1,15 @@
+{
+  "name": "rastreiounico",
+  "version": "0.0.0",
+  "dependencies": {
+    "ember": "latest",
+    "handlebars": "latest",
+    "ember-data": "latest",
+    "bootstrap-sass": "latest",
+    "emberfire": "latest",
+    "zeroclipboard": "latest"
+  },
+  "devDependencies": {
+    "ember-mocha-adapter": "0.1.2"
+  }
+}
