@@ -101,7 +101,7 @@ Rastreiounico.RastreioEditController = Ember.Controller.extend({
 				var accuracy = position.coords.accuracy;
 				var lat = position.coords.latitude;
 				var lng = position.coords.longitude;
-				if(lat && lng && !isNaN(lat) && !isNaN(lng)  ){// && (Math.abs(self.last_lat - lat) > 0.000001 || Math.abs(self.last_lng - lng) > 0.000001)){
+				if(lat && lng && !isNaN(lat) && !isNaN(lng) && (Math.abs(self.last_lat - lat) > 0.000001 || Math.abs(self.last_lng - lng) > 0.000001)){
 		      		self.initialLocation = new google.maps.LatLng(lat,lng);
 		      		//console.log(self);
 		      		self.map.setCenter(self.initialLocation);
